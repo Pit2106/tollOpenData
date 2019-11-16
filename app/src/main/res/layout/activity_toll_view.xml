@@ -1,0 +1,83 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:textColor="@color/colorTextIcons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:text="Nombre de Estacion"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_centerInParent="true"
+        android:src="@drawable/toll_icon"
+        android:layout_below="@+id/tvName"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/tvProject"
+        android:textColor="@color/colorTextIcons"
+        android:layout_below="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="Nombre de Proyecto"/>
+    <TextView
+        android:id="@+id/tvDepartament"
+        android:textColor="@color/colorTextIcons"
+        android:layout_below="@+id/tvProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="Departamento: "/>
+    <TextView
+        android:id="@+id/tvTown"
+        android:textColor="@color/colorTextIcons"
+        android:layout_below="@+id/tvDepartament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="Municipio: "/>
+    <TextView
+        android:id="@+id/tvFares"
+        android:textColor="@color/colorTextIcons"
+        android:layout_below="@+id/tvTown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="Tarifas "/>
+
+    <ListView
+        android:id="@+id/lvFares"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/tvFares"
+        android:layout_above="@+id/btBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+    <Button
+        android:id="@+id/btBack"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorTextIcons"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        />
+
+
+</RelativeLayout>

@@ -100,11 +100,9 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Toll>> call, Response<List<Toll>> response) {
                 enableLoad = true;
                 if(response.isSuccessful()){
-                    List<Toll> tolls = response.body();
-                    ArrayList<Toll> arrayTolls = new ArrayList<>();
-                    for(Toll t: tolls){
-                        arrayTolls.add(t);
-                    }
+
+                    ArrayList<Toll> arrayTolls = new ArrayList<Toll>();
+                    arrayTolls.addAll(response.body());
 
                     adapter.addList(arrayTolls);
 
@@ -122,32 +120,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-/*
-openResponseCall.enqueue(new Callback<OpenResponse>() {
-            @Override
-            public void onResponse(Call<OpenResponse> call, Response<OpenResponse> response) {
-                if(response.isSuccessful()){
-
-                    OpenResponse or = response.body();
-                    or.setPeajeList((ArrayList<Toll>)or.getStarter().get(0));
-                    ArrayList<Toll> tolls = or.getPeajeList();
-                    for(int i=0;i<tolls.size();i++){
-                        Toll t = tolls.get(i);
-                        Log.i(TAG, "Peaje: " + t.getNombreestacionpeaje());
-                    }
-                }else{
-                    Log.e(TAG,"onResponse: " + response.errorBody());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<OpenResponse> call, Throwable t) {
-                Log.e(TAG,"onFailure: " + t.getMessage());
-            }
-        });
-
-          List<Toll> tolls = response.body();
-                for(Toll t: tolls){
-                    Log.i(TAG, "Peaje: " + t.getNombreestacionpeaje());
-                }
- */

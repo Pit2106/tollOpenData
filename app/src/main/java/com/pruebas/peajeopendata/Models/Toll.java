@@ -17,7 +17,7 @@ public class Toll implements Serializable {
     private String vii;
     private String viii;
     private String ix;
-    private String ie;
+    private String ie_10;
     private String iee;
     private String ieee;
     private String iia;
@@ -157,11 +157,11 @@ public class Toll implements Serializable {
     }
 
     public String getIe() {
-        return ie;
+        return ie_10;
     }
 
     public void setIe(String ie) {
-        this.ie = ie;
+        this.ie_10 = ie;
     }
 
     public String getIee() {

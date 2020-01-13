@@ -25,7 +25,8 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_gravity="center"
-        android:src="@drawable/toll_icon" />
+        android:src="@drawable/tollImg2"
+        android:background="@android:color/white"/>
     <TextView
         android:id="@+id/tvProject"
         android:textColor="@color/colorTextIcons"
